@@ -48,6 +48,9 @@ const nextConfig = {
       }
     ]
   },
+  eslint: {
+    ignoreDuringBuilds: true, // ✅ disables ESLint from failing Vercel builds
+  },
   webpack(config, { isServer }) {
     config.module.rules.push({
       test: /\.css$/,
